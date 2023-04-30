@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 20px;
+    background: whitesmoke;
+}
+
+h1{
+    text-align: center;
+}
+.main{
+    display: grid;
+    grid-template: 1fr / 60% 40%;
+    gap: 20px;
+}
+
+.flag-place{
+            /* row/col/row/col */
+    grid-area: 1/1/2/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+#entered-data{
+    display: block;
+    outline: 1px solid green;
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.test-btn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+#btn{
+    width: 30%;
+    font-size: xx-large;
+    padding: 20px 10px;
+}
+
+.map-area{
+    grid-area: 1/2/2/3;
+}
+.map{
+    width: 100%;
+}
+svg{
+    width: 100%;
+}
+@media screen and (max-width: 1000px) {
+    .main{
+        grid-template: 40% 50% / 1fr; 
+        gap: 10px;  
+    }
+    .map-area{     
+        grid-area: 1/1/2/2;   
+    }
+    .flag-place{
+        grid-area: 2/1/3/2;
+    }
+    
+
+  }
